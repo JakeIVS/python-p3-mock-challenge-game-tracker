@@ -47,8 +47,9 @@ class Player:
     def highest_scored(cls, game):
         from lib.classes.game import Game
         player_averages = {}
-        if isinstance(game, Game) and not game._players == []:
+        if not game._players == []:
             for player in game._players:
                 player_averages[player] = game.average_score(player)
+                print(f"{player.username} averages {game.average_score(player)} points")
         return max(player_averages, key=player_averages.get)
 
