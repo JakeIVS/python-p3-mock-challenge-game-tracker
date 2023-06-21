@@ -50,6 +50,7 @@ class Player:
         if not game._players == []:
             for player in game._players:
                 player_averages[player] = game.average_score(player)
-                print(f"{player.username} averages {game.average_score(player)} points")
-        return max(player_averages, key=player_averages.get)
+            return max(player_averages, key=player_averages.get)
+        else:
+            return None
 
