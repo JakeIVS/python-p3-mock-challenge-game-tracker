@@ -35,7 +35,10 @@ class Player:
         return self._games_played
     
     def played_game(self, game):
-        return game in self._games_played
+        if game in self._games_played:
+            return True
+        else:
+            return False
     
     def num_times_played(self, game):
         if game in self._count_games:
